@@ -1,6 +1,6 @@
 {
   "name": "gridplus-react-crypto",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Crypto functionality for the GridPlus SDK, made for use with React",
   "main": "src/index.js",
   "scripts": {

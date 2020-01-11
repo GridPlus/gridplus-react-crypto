@@ -17,11 +17,10 @@ class ReactCrypto {
   }
 
   get32RandomBytes() {
-    const shaObj = new sha256('SHA-256', 'TEXT');
-    const r = this.createHash(String(this.count * new Date().getTime()));
-    shaObj.update(`${this.entropy}${r}`);
+    const preImage = String(this.count * new Date().getTime());
+    const r = this.createHash('sha256').update(preimage).digest();
     this.count += 1;
-    return shaObj.getHash('HEX');
+    return r;
   }
 
   // Return 32 bytes of entropy
