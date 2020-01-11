@@ -18,7 +18,7 @@ class ReactCrypto {
 
   get32RandomBytes() {
     const preImage = String(this.count * new Date().getTime());
-    const r = this.createHash('sha256').update(preimage).digest();
+    const r = this.createHash('sha256').update(preImage).digest();
     this.count += 1;
     return r;
   }
