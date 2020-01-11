@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-const sha256 = require('./sha256.js');
+
 const Buffer = require('buffer/').Buffer;
 const hash = require('hash.js');
 
@@ -11,9 +11,7 @@ class ReactCrypto {
 
   constructor(e) {
     // Hash whatever the entropy provided is and use that hash as the entropy for sjcl
-    const shaObj = new sha256('SHA-256', 'TEXT');
-    shaObj.update(e);
-    this.entropy = shaObj.getHash('HEX');
+    this.entropy = new Hash('sha256').update(e).digest();
     this.count = 0;
     this.hash = null;
   }
