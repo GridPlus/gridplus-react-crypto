@@ -42,7 +42,7 @@ class ReactCrypto {
   }
 
   createHash(type) {
-    this.hash = new Hash();
+    this.hash = new Hash(type);
     return this.hash;
   }
 }
@@ -51,10 +51,10 @@ class Hash {
   constructor(type) {
     switch (type) {
       case 'sha256':
-        this.hash = hash('sha256');
+        this.hash = hash.sha256();
         break;
       case 'rmd160':
-        this.hash = hash('ripemd160');
+        this.hash = hash.ripemd160();
         break;
       default:
         throw new Error('Unsupported hash type');
