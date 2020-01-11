@@ -1,0 +1,23 @@
+{
+  "name": "gridplus-react-crypto",
+  "version": "0.0.0",
+  "description": "Crypto functionality for the GridPlus SDK, made for use with React",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GridPlus/gridplus-react-crypto.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GridPlus/gridplus-react-crypto/issues"
+  },
+  "homepage": "https://github.com/GridPlus/gridplus-react-crypto#readme",
+  "dependencies": {
+    "buffer": "^5.4.3",
+    "hash.js": "^1.1.7"
+  }
+}
